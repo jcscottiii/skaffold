@@ -11,3 +11,12 @@ build:
 deploy:
   docker:
     images: [bert, ernie]
+portForward:
+- resourceType: container
+  resourceName: bert
+  port: 8080
+  localPort: 9000
+- resourceType: container
+  resourceName: ernie
+  port: 8081
+  localPort: 9001
